@@ -238,12 +238,23 @@ document.head.appendChild(notificationStyles);
 // Typing animation for hero title
 function typeWriter(element, text, speed = 100) {
     let i = 0;
-    element.innerHTML = '';
+    const spans = element.querySelectorAll('span');
+    const originalTexts = [];
+    spans.forEach(span => {
+        originalTexts.push(span.textContent);
+        span.textContent = '';
+    });
     
     function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
+        spans.forEach((span, index) => {
+            if (i < originalTexts[index].length) {
+                span.textContent = originalTexts[index].substring(0, i + 1);
+            }
+        });
+        i++;
+        
+        const maxLength = Math.max(...originalTexts.map(text => text.length));
+        if (i < maxLength) {
             setTimeout(type, speed);
         }
     }
