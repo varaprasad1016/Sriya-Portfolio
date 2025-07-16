@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(248, 250, 252, 0.92));
     position: relative;
 }
 
@@ -21,12 +21,14 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23FFB7C5" fill-opacity="0.15" d="M100 10c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6zm25 15c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm-50 0c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm25 25c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8z"/></svg>');
-    background-size: 200px 200px;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><g fill="%23FFB7C5" fill-opacity="0.4"><path d="M250 100c10 0 18 8 18 18s-8 18-18 18-18-8-18-18 8-18 18-18zm0 90c45 0 75 30 75 75s-30 75-75 75-75-30-75-75 30-75 75-75zm0 30c24 0 45 21 45 45s-21 45-45 45-45-21-45-45 21-45 45-45z"/><path d="M100 200c8 0 15 7 15 15s-7 15-15 15-15-7-15-15 7-15 15-15zm300 0c8 0 15 7 15 15s-7 15-15 15-15-7-15-15 7-15 15-15zm-150 200c8 0 15 7 15 15s-7 15-15 15-15-7-15-15 7-15 15-15z"/></g></svg>');
+    background-size: 500px 500px;
     background-repeat: repeat;
-    opacity: 0.5;
+    opacity: 1;
     z-index: -1;
     pointer-events: none;
+    animation: sakuraFloat 60s linear infinite;
 }
 
 html {
@@ -186,7 +188,7 @@ html {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(226, 232, 240, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.85) 0%, rgba(226, 232, 240, 0.85) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -198,15 +200,15 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%23FFB7C5" fill-opacity="0.1" d="M100 10c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6zm25 15c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm-50 0c2.2 0 4 1.8 4 4s-1.8 4-4 4-4-1.8-4-4 1.8-4 4-4zm25 25c4.4 0 8 3.6 8 8s-3.6 8-8 8-8-3.6-8-8 3.6-8 8-8z"/></svg>') repeat;
-    background-size: 200px 200px;
-    opacity: 0.3;
-    animation: sakuraFloat 30s linear infinite;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><g fill="%23FFB7C5" fill-opacity="0.3"><path d="M200 80c8 0 14 6 14 14s-6 14-14 14-14-6-14-14 6-14 14-14zm0 70c35 0 60 25 60 60s-25 60-60 60-60-25-60-60 25-60 60-60zm0 24c20 0 36 16 36 36s-16 36-36 36-36-16-36-36 16-36 36-36z"/><path d="M80 160c6 0 12 5 12 12s-5 12-12 12-12-5-12-12 5-12 12-12zm240 0c6 0 12 5 12 12s-5 12-12 12-12-5-12-12 5-12 12-12zm-120 160c6 0 12 5 12 12s-5 12-12 12-12-5-12-12 5-12 12-12z"/></g></svg>') repeat;
+    background-size: 400px 400px;
+    opacity: 0.4;
+    animation: sakuraFloat 40s linear infinite reverse;
 }
 
 @keyframes sakuraFloat {
     0% { background-position: 0 0; }
-    100% { background-position: 200px 200px; }
+    100% { background-position: 500px 500px; }
 }
 
 .hero-container {

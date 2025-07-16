@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <pattern id="sakura" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <!-- Large center flower -->
+      <path fill="#FFB7C5" fill-opacity="0.3" d="M50 20c3 0 5 2 5 5s-2 5-5 5-5-2-5-5 2-5 5-5zm0 30c15 0 25 10 25 25s-10 25-25 25-25-10-25-25 10-25 25-25zm0 10c8 0 15 7 15 15s-7 15-15 15-15-7-15-15 7-15 15-15z"/>
+      <!-- Small flowers in corners -->
+      <path fill="#FFB7C5" fill-opacity="0.2" d="M15 15c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zm70 0c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zm0 70c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zm-70 0c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="400" fill="url(#sakura)"/>
+</svg>
